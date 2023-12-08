@@ -3,10 +3,11 @@
 ## Project/Goals
 
 Objectives of this project include:
-Loading data into a database
-Using SQL for data exploration
-Using SQL for data analysis
-Utilizing SQL to answer Business Questions with data
+
+- Loading data into a database.
+- Using SQL for data exploration.
+- Using SQL for data analysis.
+- Utilizing SQL to answer Business Questions with data.
 
 
 ## Process
