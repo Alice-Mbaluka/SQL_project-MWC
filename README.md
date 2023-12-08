@@ -1,4 +1,4 @@
-# MumsWhoCodeSQL_project
+# SQL_project
 
 ## Project/Goals
 
@@ -10,7 +10,8 @@
 (Your Step 2)
 
 ## Results
-(fill in what you discovered the data could tell you  and how you used the data to answer those questions)
+
+(fill in what you discovered the data could tell you and how you used the data to answer those questions)
 
 ## Challenges
 
