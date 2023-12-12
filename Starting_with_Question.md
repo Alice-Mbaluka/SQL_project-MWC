@@ -138,7 +138,9 @@ WHERE
 
 
 Answer:
-a) ![image](https://github.com/Alice-Mbaluka/SQL_project-MWC/assets/79568950/48b2f221-3be1-44b6-8454-98a8d5506fc2)
+a)
+
+![image](https://github.com/Alice-Mbaluka/SQL_project-MWC/assets/79568950/48b2f221-3be1-44b6-8454-98a8d5506fc2)
 
 b) Entire villa: 13742.75 (Highest average price)
 
