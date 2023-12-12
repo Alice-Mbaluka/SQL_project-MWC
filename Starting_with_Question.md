@@ -16,28 +16,27 @@ FROM
 
 
 Percentage:
-SELECT
-    total_listings,
-    active_listings,
-    inactive_listings,
-    (active_listings * 100.0 / total_listings) AS active_percentage,
-    (inactive_listings * 100.0 / total_listings) AS inactive_percentage
-FROM
-    total_counts,
-    (
-        SELECT
-            COUNT(*) FILTER (WHERE availability_365 > 0) AS active_listings,
-            COUNT(*) FILTER (WHERE availability_365 = 0) AS inactive_listings
-        FROM
-            capetown_airbnb_listings
-    ) AS availability_counts;
+
+
+SELECT SUM(HOST_LISTINGS_COUNT) as Active_listings,
+		SUM(HOST_TOTAL_LISTINGS_COUNT) as Total_listings,
+(
+	SELECT SUM(HOST_TOTAL_LISTINGS_COUNT) - SUM(HOST_LISTINGS_COUNT) AS INACTIVE_LISTINGS),
+	(
+		SELECT CONCAT(ROUND(((SUM(HOST_TOTAL_LISTINGS_COUNT) -  SUM(HOST_LISTINGS_COUNT)) :: numeric 
+							 / SUM(HOST_TOTAL_LISTINGS_COUNT)::numeric)* 100,2),'%')) as percent_of_Inactive_listings,
+		(
+			SELECT CONCAT(ROUND(((SUM(HOST_LISTINGS_COUNT)) :: numeric 
+							 / SUM(HOST_TOTAL_LISTINGS_COUNT)::numeric)* 100,2),'%')) as percent_of_Active_listings	 
+FROM CAPETOWN_AIRBNB_LISTINGS;
 
 
 Answer:
-Total listings are 21120.
-Active listings are 19595.
-Yes, there are inactive listings in the data, inactive = 1525
+
 Percentage: 
+
+![image](https://github.com/Alice-Mbaluka/SQL_project-MWC/assets/79568950/7fe401a7-4d4a-4338-bcf9-3b0216ebef29)
+
 
 
 Question 2: How many distinct hosts are present in the CapeTown AirBnB listing? How many listings does each of this distinct hosts have? Which host have the most listings
@@ -207,6 +206,11 @@ FROM
     capetown_airbnb_listings
 
 
+![image](https://github.com/Alice-Mbaluka/SQL_project-MWC/assets/79568950/bcc732b7-55b7-4928-b64d-937ee6c1e01f)
+
 
 
 Answer:
+
+![image](https://github.com/Alice-Mbaluka/SQL_project-MWC/assets/79568950/6e51d607-4ed5-435a-802c-b3e139f779b3)
+
