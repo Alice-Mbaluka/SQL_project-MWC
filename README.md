@@ -13,7 +13,7 @@ Objectives of this project include:
 ## Process
 
 The first step was loading the database into the SQL server. 
-We then cleaned the data and explored the types of data in the database to familiarize ourselves with the kind of information available in the database. 
+We then cleaned the data, utilizing data cleaning queries to identify any duplicateand missing rows in the data, and explored the types of data in the database to familiarize ourselves with the kind of information available in the database. 
 
 The second step was finding out what the data could tell us. We did this by using queries that could answer the business questions.
 
