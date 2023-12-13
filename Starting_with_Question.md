@@ -4,7 +4,7 @@ Question 1: How many total listings are there in the Capetown AirBnB data? Would
 SQL Queries:
 
 -- Total number of listings
-SELECT COUNT(*) AS total_listings
+SELECT	SUM(HOST_TOTAL_LISTINGS_COUNT) as Total_listings
 FROM capetown_airbnb_listings;
 
 -- Number of active and inactive listings
