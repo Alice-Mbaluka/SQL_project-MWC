@@ -50,3 +50,12 @@ CREATE TABLE listings (
 			instant_bookable bool			
 );
 --Having created this table, right_click on your table, click on import, fill in the fields and that should succesfully import the CSV file into the listins table
+
+--Data Cleaning
+Select *
+From capetown_airbnb_listings
+Where ID IS null
+
+Select id,count (*)
+From capetown _airbnb_listings
+Group by Id having count *>1
